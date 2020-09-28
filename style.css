@@ -1,0 +1,37 @@
+.nav-link.navbar {
+    color: white !important;
+  }
+
+  footer.footer {
+    background-color: #0888F4;
+    color: white;
+  }
+
+  .card {
+     max-width: 300px;
+     text-align: center;
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   }
+
+   .price {
+     color: rgb(10, 25, 241);
+     font-size: 20px;
+   }
+
+   .card button {
+     border: none;
+     outline: 0;
+     padding: 15px;
+     color: rgb(19, 219, 233);
+     background-color: rgb(73, 94, 212);
+     text-align: center;
+     cursor: pointer;
+     width: 50%;
+     font-size: 18px;
+   }
+
+   .card button:hover {
+     opacity: 0.4;
+   }
+
+   /*idea of the design control flow of card was taken from w3school*/

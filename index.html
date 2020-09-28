@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+ <html>
+
+ <head>
+   <meta charset="UTF-8">
+   <title>Lyndale Cricket Club</title>
+
+   <!-- here is the star of the show - the Vue library! -->
+   <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+
+   <!-- animate.css -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+   
+   <!-- Bootstrap -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+   <!-- Custom CSS -->
+   <link rel="stylesheet" href="style.css">
+
+   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js"></script>
+   <script src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
+
+   <!-- Vue Script -->
+   <script src="script.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script><!--to enable the dropdown navbar-->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+ </head>
+  <body>
+    <div id="app">
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #0888F4; border-bottom: 1px solid transparent;">
+        <a class="navbar-brand mx-auto" href="#">
+          <img src="./assets/logo.png" alt="" height="90">
+          <span style="font-size: 3rem;" class="text-white">LYNDALE CRICKET CLUB</span>
+        </a>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-light mb-5" style="background-color: #0888F4; border-bottom: 1px solid white;">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link navbar" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link navbar" to="/statistic">Statistics</router-link><!--links to statistics component-->
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link navbar" to="/merchandise">Merchandise</router-link><!--links to merchandise component-->
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link navbar" to="/form">Registration</router-link><!--links to registration component-->
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link navbar dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Policy
+            </a>
+            <div class="dropdown-menu animate__animated animate__fadeInDown animate__faster" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="./assets/Member Protection Policy_9555_.pdf" download>Member Protection</a>
+              <a class="dropdown-item" href="./assets/Child Safe Code of Conduct_9548_.pdf" download>Chile Safe Code of Conduct</a>
+              <a class="dropdown-item" href="./assets/Child Safe Communications_9549_.pdf" download>Child Safe Communications</a>
+              <a class="dropdown-item" href="./assets/Child Safe Junior Coach Code of Conduct_9551_.pdf" download>Child Safe Junior Coach Code of Conduct</a>
+              <a class="dropdown-item" href="./assets/Child Safe Picking up and Dropping off Children_9552_.pdf" download>Child Safe Picking up and Dropping off Children</a>
+              <a class="dropdown-item" href="./assets/Child Safe Spectator Code of Conduct_9554_.pdf" download>Child Safe Spectator Code of Conduct</a>
+              <a class="dropdown-item" href="./assets/Child Safe Policy_9553_.pdf" dowload>Child Safe Policy</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link navbar" to="/contact">Contact Us</router-link><!--links to contact component-->
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Used to render all components registered inside of route -->
+    <router-view></router-view>
+
+    <footer class="py-4 mt-5 footer">
+      <div class="container text-center">
+        <h1 class="h1-responsive font-weight-bold text-center my-4" >Proudly Sponsored by</h1>
+        <a target="_blank" href="https://www.topnotchtrophies.com.au/"><img class="figure-img" height="70" src="./topNotch.png" alt="TopNotch Image"></a>
+        <a target="_blank" href="http://www.surdexsteel.com.au/"><img class="figure-img" height="70" src="./surdexSteel.png" alt="Surdex Steel"></a>
+      </div>
+    </footer>
+  </div>
+ </body>
+ </html>
